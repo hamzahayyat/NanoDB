@@ -1,0 +1,19 @@
+# Build artifacts
+build/
+*.o
+*.a
+*.exe
+
+# Runtime data (do not push TPC-H .bin files)
+data/*.bin
+data/queries.txt
+nanodb_execution.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# macOS
+.DS_Store
