@@ -29,11 +29,11 @@ $(BUILD_DIR)/%.o: src/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 run: all
-	cd $(BUILD_DIR) && ../$(TARGET)
+	./$(TARGET)
 
 # Stress mode: 50-page pool for Test Case D
 stress: all
-	cd $(BUILD_DIR) && ../$(TARGET) --stress
+	./$(TARGET) --stress
 
 clean:
 	rm -rf $(BUILD_DIR) $(DATA_DIR)/*.bin nanodb_execution.log
